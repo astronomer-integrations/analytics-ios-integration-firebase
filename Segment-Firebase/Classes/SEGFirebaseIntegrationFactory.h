@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
-#if defined(__has_include) && __has_include(<Analytics/SEGAnalytics.h>)
-#import <Analytics/SEGIntegrationFactory.h>
+#if defined(__has_include) && __has_include(<MetarouterAnalytics/SEGAnalytics.h>)
+#import <MetarouterAnalytics/SEGIntegrationFactory.h>
 #else
 #import <Segment/SEGIntegrationFactory.h>
 #endif

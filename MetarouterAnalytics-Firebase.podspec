@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-  s.name             = "Segment-Firebase"
+  s.name             = "MetarouterAnalytics-Firebase"
   s.version          = "2.7.1-beta"
-  s.summary          = "Firebase Integration for Segment's analytics-ios library."
+  s.summary          = "Firebase Integration for Metarouter's analytics-ios library."
 
   s.description      = <<-DESC
                        Analytics for iOS provides a single API that lets you
@@ -10,20 +10,20 @@ Pod::Spec.new do |s|
                        This is the Firebase integration for the iOS library.
                        DESC
 
-  s.homepage         = "http://segment.com/"
+  s.homepage         = "http://metarouter.io/"
   s.license          =  { :type => 'MIT' }
-  s.author           = { "Segment" => "friends@segment.com" }
-  s.source           = { :git => "https://github.com/segment-integrations/analytics-ios-integration-firebase.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/segment'
+  s.author           = { "Metarouter" => "info@metarouter.io" }
+  s.source           = { :git => "https://github.com/astronomer-integrations/analytics-ios-integration-firebase.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/metarouter'
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '9.0'
   s.requires_arc = true
 
   s.source_files = 'Segment-Firebase/Classes/**/*'
   s.default_subspec = 'Core'
   s.static_framework = true
 
-  s.dependency 'Analytics'
+  s.dependency 'MetarouterAnalytics', '~> 3.8.0-beta.4'
   s.dependency 'Firebase/Core', '~> 6.2'
   s.dependency 'FirebaseAnalytics','~> 6.1'
 
@@ -35,4 +35,10 @@ Pod::Spec.new do |s|
     # This will bundle in Firebase Dynamic Link support
     dynamiclinks.dependency 'Firebase/DynamicLinks'
   end
+
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
 end

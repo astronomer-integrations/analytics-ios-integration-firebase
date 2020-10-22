@@ -1,8 +1,8 @@
 #import "SEGFirebaseIntegration.h"
 #import <Firebase/Firebase.h>
 
-#if defined(__has_include) && __has_include(<Analytics/SEGAnalytics.h>)
-#import <Analytics/SEGAnalyticsUtils.h>
+#if defined(__has_include) && __has_include(<MetarouterAnalytics/SEGAnalytics.h>)
+#import <MetarouterAnalytics/SEGAnalyticsUtils.h>
 #else
 #import <Segment/SEGAnalyticsUtils.h>
 #endif
