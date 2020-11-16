@@ -7,7 +7,7 @@
 //
 
 #import "SEGViewController.h"
-#import <Analytics/SEGAnalytics.h>
+#import <MetarouterAnalytics/SEGAnalytics.h>
 
 
 @interface SEGViewController ()
@@ -30,6 +30,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     [[SEGAnalytics sharedAnalytics] identify:@"123abc" traits:@{ @"name" : @"fred",
                                                                  @"gender" : @"male" }];
+    [[SEGAnalytics sharedAnalytics] flush];
 }
 
 - (void)didReceiveMemoryWarning

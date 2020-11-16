@@ -7,8 +7,8 @@
 //
 
 #import "SEGAppDelegate.h"
-#import <Analytics/SEGAnalytics.h>
-#import <Segment-Firebase/SEGFirebaseIntegrationFactory.h>
+#import <MetarouterAnalytics/SEGAnalytics.h>
+#import <MetarouterAnalytics-Firebase/SEGFirebaseIntegrationFactory.h>
 
 
 @implementation SEGAppDelegate
